@@ -100,11 +100,15 @@ namespace eicrecon {
       debug("No beam hadron found");
       return;
     }
+    else {
+	std::cout << "hadron id: " << pi_coll[0].getPDG() << std::endl;
+    }
+
     const PxPyPzEVector pi(
       round_beam_four_momentum(
         pi_coll[0].getMomentum(),
         m_particleSvc.particle(pi_coll[0].getPDG()).mass,
-        {41.0, 100.0, 275.0},
+        {41.0, 100.0, 110.0, 275.0},
         m_crossingAngle)
       );
 
@@ -122,7 +126,7 @@ namespace eicrecon {
     }
 
     // DIS kinematics calculations
-    static const auto m_proton = m_particleSvc.particle(2212).mass;
+    static const auto m_proton = m_particleSvc.particle(pi_coll[0].getPDG()).mass;
     const auto ef = electrons.front();
     const auto q = ei - ef;
     const auto q_dot_pi = q.Dot(pi);

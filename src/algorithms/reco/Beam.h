@@ -71,6 +71,9 @@ namespace eicrecon {
     for (const auto& pz : pz_set) {
       if (fabs(p_in.z / pz - 1) < 0.1) {
         p_out.SetPz(pz);
+	std::cout << std::endl;
+	std::cout << " ** p_out.z is " << p_out.Pz() << " ** " << std::endl;
+	std::cout << std::endl;
         break;
       }
     }

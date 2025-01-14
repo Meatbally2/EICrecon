@@ -100,9 +100,6 @@ namespace eicrecon {
       debug("No beam hadron found");
       return;
     }
-    else {
-	std::cout << "hadron id: " << pi_coll[0].getPDG() << std::endl;
-    }
 
     const PxPyPzEVector pi(
       round_beam_four_momentum(

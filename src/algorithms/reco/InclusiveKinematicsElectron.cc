@@ -108,7 +108,7 @@ namespace eicrecon {
       round_beam_four_momentum(
         pi_coll[0].getMomentum(),
         m_particleSvc.particle(pi_coll[0].getPDG()).mass,
-        {41.0, 100.0, 110.0, 275.0},
+        {41.0, 100.0, 110.0, 166.0, 275.0},
         m_crossingAngle)
       );
 
